@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nit.dao.StudentDao" >
+
+    <resultMap id="studentResultMap" type="com.nit.entity.Student">
+        <id property="id" column="id"></id>
+        <result property="stuNum" column="stuNum"></result>
+        <result property="stuPwd" column="stuPwd"></result>
+        <result property="stuCall" column="stuCall"></result>
+        <result property="stuClass" column="stuClass"></result>
+        <result property="stuName" column="stuName"></result>
+        <result property="courseId" column="courseId"></result>
+        <result property="isDelete" column="isDelete"></result>
+
+    </resultMap>
+    <!--登录查询-->
+    <select id="findByStuNum" resultType="com.nit.entity.Student" parameterType="String">
+        select * from tbstudent where stuNum = #{stuNum}
+    </select>
+    <!--显示所有用户-->
+    <!--<select id="queryAllUser" resultMap="userResultMap">-->
+        <!--select id,userName,password from userinfor-->
+    <!--</select>-->
+    <!--用户模糊查询-->
+    <!--<select id="findUserByName" resultMap="userResultMap">-->
+        <!--select id,userName,password from userinfor where userName LIKE CONCAT(CONCAT('%',#{username},'%'))-->
+    <!--</select>-->
+    <!--系统内增加用户-->
+    <!--<insert id="addUser" parameterType="User">-->
+        <!--insert into userinfor (id,userName,password) VALUE (#{id},#{userName},#{password})-->
+    <!--</insert>-->
+    <!--注册增加新用户-->
+    <!--<insert id="registerUser" parameterType="User">-->
+        <!--insert into userinfor (userName,password) VALUE (#{userName},#{password})-->
+    <!--</insert>-->
+<!---->
+    <!--<select id="judgeUser" resultType="User" parameterType="String">-->
+        <!--select userName from userinfor where userName = #{userName}-->
+    <!--</select>-->
+    <!--判断用户名是否重复-->
+    <!--<select id="judgeUserIn" parameterType="String" resultType="User">-->
+        <!--select userName from userinfor where userName = #{userName}-->
+    <!--</select>-->
+
+
+</mapper>
+
