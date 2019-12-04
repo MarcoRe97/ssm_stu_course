@@ -2,6 +2,7 @@ package com.nit.service.serviceImpl;
 
 import com.nit.dao.StudentDao;
 import com.nit.entity.Student;
+import com.nit.entity.Suser;
 import com.nit.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,7 +21,7 @@ public class StudentServiceImpl implements StudentService {
         Student student = studentDao.findByStuNum(stuNum);
         System.out.println(student);
 //        账号密码均正确
-        if(student.getStuPwd().equals(stuPwd) && student != null){
+        if(student.getsPwd().equals(stuPwd) && student != null){
             return 1;
         }
 //        密码错误，账号存在
@@ -29,5 +30,20 @@ public class StudentServiceImpl implements StudentService {
         }
 
         return 0;
+    }
+
+    @Override
+    public boolean checkStuNum(String stuNum) {
+        String stu = studentDao.findStuWithStuNum(stuNum);
+        if(stu != null)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public int addStudentUser(Student student) {
+        return studentDao.registerStudent(student);
     }
 }

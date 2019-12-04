@@ -1,6 +1,7 @@
 package com.nit.controller;
 
 import com.nit.entity.Student;
+import com.nit.entity.Suser;
 import com.nit.service.StudentService;
 import com.nit.service.serviceImpl.StudentServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,11 +24,11 @@ public class StudentController {
 
     @ResponseBody
     @RequestMapping("/login.do")
-    public void checkLogin(String stuNum, String stuPwd,HttpServletResponse response) throws IOException {
+    public void checkLogin(String sNum, String sPwd,HttpServletResponse response) throws IOException {
 //        String stuNum = request.getParameter("account");
 //        String stuPwd = request.getParameter("secret");
         int flag;
-        flag = studentService.checkLogin(stuNum,stuPwd);
+        flag = studentService.checkLogin(sNum,sPwd);
         if(flag == 1){
             response.getWriter().write("success");
 //            return "success";
@@ -38,5 +39,17 @@ public class StudentController {
         else{
             response.getWriter().write("faile");
         }
+    }
+
+    @ResponseBody
+    @RequestMapping("/register.do")
+    public void registerStudent(String sNum,String sPwd,String sCall,HttpServletResponse response) throws IOException {
+        Student student = new Student();
+        student.setsNum(sNum);
+        student.setsPwd(sPwd);
+        student.setsCall(sCall);
+        student.setIsDelete(1);
+        studentService.addStudentUser(student);
+        response.getWriter().write("success");
     }
 }

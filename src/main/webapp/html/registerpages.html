@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生注册</title>
+    <script src="/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/registerpages.js"></script>
+    <link type="text/css" href="/css/registerpages.css" rel="stylesheet">
+</head>
+<body>
+    <div class="top-bar"></div>
+    <div class="center-content">
+        <div class="register-box">
+            <div class="title-line">
+                <span class="tit" style="font-size: 38px">注册</span>
+            </div>
+            <div class="register-content">
+                <form class="register-form">
+                    <div class="form-group">
+                        <div class="el-input">
+                            <input class="el-input_inner" type="text" autocomplete="off" placeholder="学号" id="lNum">
+                        </div>
+                    </div>
+                    <div class="register-hidden-group"></div>
+                    <div class="form-group">
+                        <div class="el-input">
+                            <input class="el-input_inner" type="password" autocomplete="off" placeholder="密码（6-16个字符，区分大小写）" id="lPwd">
+                        </div>
+                    </div>
+                    <div class="register-hidden-group"></div>
+                    <div class="form-group">
+                        <div class="el-input">
+                            <input class="el-input_inner" type="text" autocomplete="off" placeholder="手机号" id="lCall">
+                        </div>
+                    </div>
+                    <div class="register-hidden-group"></div>
+                    <div class="form-group" onclick="$.registerSubmit()">
+                        <button disabled="disabled" type="button" class="btn-register btn-full btn-register-first">
+                            <span>注册</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

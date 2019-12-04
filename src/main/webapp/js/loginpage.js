@@ -5,7 +5,7 @@ $.loginSubmit=function(){
     student.stuPwd =$(".password").val();
     $.ajax({url:"/student/login.do",
         type:"post",
-        data:{"stuNum":$(".username").val(),"stuPwd":$(".password").val()},
+        data:{"sNum":$(".username").val(),"sPwd":$(".password").val()},
         // dataType:"json",
         // contentType: "application/json; charset=utf-8",
         success:function (data) {

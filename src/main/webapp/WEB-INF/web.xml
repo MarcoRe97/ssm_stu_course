@@ -5,7 +5,7 @@
          version="3.1">
 
   <welcome-file-list>
-    <welcome-file>/html/loginpages.html</welcome-file>
+    <welcome-file>/html/homepages.html</welcome-file>
   </welcome-file-list>
 
   <!-- 配置加载类路径的配置文件 -->

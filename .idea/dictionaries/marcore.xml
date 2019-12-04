@@ -1,10 +1,27 @@
 <component name="ProjectDictionaryState">
   <dictionary name="marcore">
     <words>
+      <w>courseid</w>
       <w>faile</w>
       <w>failer</w>
+      <w>isdelete</w>
+      <w>lcall</w>
+      <w>lname</w>
       <w>loginpages</w>
+      <w>lpwd</w>
+      <w>registerpages</w>
+      <w>scall</w>
+      <w>sclass</w>
+      <w>sname</w>
+      <w>snum</w>
+      <w>spwd</w>
+      <w>stucall</w>
+      <w>stuclass</w>
       <w>studentcourse</w>
+      <w>stuname</w>
+      <w>stunum</w>
+      <w>stupwd</w>
+      <w>suser</w>
     </words>
   </dictionary>
 </component>

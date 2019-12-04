@@ -5,22 +5,24 @@ import javax.persistence.Entity;
 @Entity
 public class Student {
     private int id;
-    private String stuNum;
-    private String stuPwd;
-    private String stuCall;
+    private String sNum;
+    private String sPwd;
+    private String sCall;
     private String stuClass;
     private String stuName;
-    private int courseId;
+    private int sId;
+    private int cId;
     private int isDelete;
 
-    public Student(int id, String stuNum, String stuPwd, String stuCall, String stuClass, String stuName, int courseId, int isDelete) {
+    public Student(int id, String sNum, String sPwd, String sCall, String stuClass, String stuName, int sId, int cId, int isDelete) {
         this.id = id;
-        this.stuNum = stuNum;
-        this.stuPwd = stuPwd;
-        this.stuCall = stuCall;
+        this.sNum = sNum;
+        this.sPwd = sPwd;
+        this.sCall = sCall;
         this.stuClass = stuClass;
         this.stuName = stuName;
-        this.courseId = courseId;
+        this.sId = sId;
+        this.cId = cId;
         this.isDelete = isDelete;
     }
 
@@ -35,36 +37,28 @@ public class Student {
         this.id = id;
     }
 
-    public String getStuNum() {
-        return stuNum;
+    public String getsNum() {
+        return sNum;
     }
 
-    public void setStuNum(String stuNum) {
-        this.stuNum = stuNum;
+    public void setsNum(String sNum) {
+        this.sNum = sNum;
     }
 
-    public String getStuPwd() {
-        return stuPwd;
+    public String getsPwd() {
+        return sPwd;
     }
 
-    public void setStuPwd(String stuPwd) {
-        this.stuPwd = stuPwd;
+    public void setsPwd(String sPwd) {
+        this.sPwd = sPwd;
     }
 
-    public String getStuCall() {
-        return stuCall;
+    public String getsCall() {
+        return sCall;
     }
 
-    public void setStuCall(String stuCall) {
-        this.stuCall = stuCall;
-    }
-
-    public String getStuName() {
-        return stuName;
-    }
-
-    public void setStuName(String stuName) {
-        this.stuName = stuName;
+    public void setsCall(String sCall) {
+        this.sCall = sCall;
     }
 
     public String getStuClass() {
@@ -75,12 +69,28 @@ public class Student {
         this.stuClass = stuClass;
     }
 
-    public int getCourseId() {
-        return courseId;
+    public String getStuName() {
+        return stuName;
     }
 
-    public void setCourseId(int courseId) {
-        this.courseId = courseId;
+    public void setStuName(String stuName) {
+        this.stuName = stuName;
+    }
+
+    public int getsId() {
+        return sId;
+    }
+
+    public void setsId(int sId) {
+        this.sId = sId;
+    }
+
+    public int getcId() {
+        return cId;
+    }
+
+    public void setcId(int cId) {
+        this.cId = cId;
     }
 
     public int getIsDelete() {
@@ -89,19 +99,5 @@ public class Student {
 
     public void setIsDelete(int isDelete) {
         this.isDelete = isDelete;
-    }
-
-    @Override
-    public String toString() {
-        return "Student{" +
-                "id=" + id +
-                ", stuNum='" + stuNum + '\'' +
-                ", stuPwd='" + stuPwd + '\'' +
-                ", stuCall='" + stuCall + '\'' +
-                ", stuClass='" + stuClass + '\'' +
-                ", stuName='" + stuName + '\'' +
-                ", courseId=" + courseId +
-                ", isDelete=" + isDelete +
-                '}';
     }
 }

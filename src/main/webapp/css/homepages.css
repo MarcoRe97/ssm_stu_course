@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.sy-header-m{
+    font: 12px 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei', 'Hiragino Sans GB', 'Heiti SC', 'WenQuanYi Micro Hei', sans-serif;
+    position: relative;
+    z-index: 10000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+}
+.head-menu{
+    position: relative;
+    z-index: 200;
+    height: 42px;
+    color: #222;
+}
+.nav-header{
+    width: 980px;
+    margin: 0 auto;
+    min-width: 980px;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-control{
+    display: block;
+}
+
+.nav-content-left{
+    float: left;
+    width: 150px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.content-divide{
+    width: 100%;
+    height: 106px;
+    /*background: url("/img/bg-school.jpeg");*/
+    background: #00a1d6;
+    z-index: 10;
+}
+.divide-bg{
+    width: 980px;
+    height: 106px;
+    margin: 0 auto;
+    /*background: url("/img/bg-book1.jpeg");*/
+    background: #00a1d6;
+}
+
+.content-mid{
+    overflow: hidden;
+    width: 980px;
+    height: 100%;
+    margin: 10px auto 100px;
+    border: 1px solid #e1e2e5;
+    box-shadow: 0 2px 4px rgba(0,0,0,.14);
+    background: #fafafa;
+    border-radius: 4px;
+}
+.person-title{
+    display: block;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 16px;
+    color: #99a2aa;
+    cursor: default;
+    border-bottom: 1px solid #e1e2e5;
+}
+
+.person-ul{
+    list-style: none;
+    display: block;
+    /*list-style-type: disc;*/
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+.person-ul li{
+    width: 150px;
+    height: 48px;
+    line-height: 48px;
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+.person-info-nav{
+    margin-left: 12px;
+    font-size: 14px;
+    color: #222;
+}
+
+.content-info-right{
+    float: left;
+    width: 829px;
+    border-left: 1px solid #ddd;
+    background: #fff;
+    min-height: 890px!important;
+}
+.content-info-right-all{
+    padding: 50px 20px 0;
+    width: 789px;
+}
