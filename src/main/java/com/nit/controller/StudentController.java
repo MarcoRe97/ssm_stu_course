@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -24,9 +25,9 @@ public class StudentController {
 
     @ResponseBody
     @RequestMapping("/login.do")
-    public void checkLogin(String sNum, String sPwd,HttpServletResponse response) throws IOException {
-//        String stuNum = request.getParameter("account");
-//        String stuPwd = request.getParameter("secret");
+    public void checkLogin(String sNum, String sPwd, HttpServletResponse response, HttpSession session) throws IOException {
+        session.setAttribute("userName",sNum);
+        session.setAttribute("userPwd",sPwd);
         int flag;
         flag = studentService.checkLogin(sNum,sPwd);
         if(flag == 1){
@@ -51,5 +52,21 @@ public class StudentController {
         student.setIsDelete(1);
         studentService.addStudentUser(student);
         response.getWriter().write("success");
+    }
+
+    @ResponseBody
+    @RequestMapping("/keeplogin.do")
+    public void keepLogin(HttpSession session,HttpServletResponse response) throws IOException {
+        String userName = session.getAttribute("userName").toString();
+        String userPwd = session.getAttribute("userPwd").toString();
+
+        if(userName != null) {
+            if (studentService.checkLogin(userName, userPwd) == 1) {
+                response.getWriter().write(userName);
+            }
+        }
+        else{
+            response.getWriter().write("error");
+        }
     }
 }

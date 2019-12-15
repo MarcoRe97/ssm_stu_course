@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nit.dao.CourseDao">
+
+    <resultMap id="courseResultMap" type="com.nit.entity.Course">
+        <id property="cId" column="cid"></id>
+        <result property="cName" column="cname"></result>
+        <result property="cWeek" column="cweek"></result>
+        <result property="cNum" column="cnum"></result>
+        <result property="tId" column="tid"></result>
+    </resultMap>
+
+
+
+    <select id="getAllCourses" resultMap="courseResultMap" parameterType="String">
+        SELECT course.cid,cname,cweek,cnum,tid
+        FROM course
+        RIGHT JOIN coursechoosing
+        ON snum=#{sNum} and coursechoosing.cid=course.cid
+        ORDER BY cweek,cnum asc
+    </select>
+
+    <select id="findCourseIdByNameWeek" resultMap="String" parameterType="String">
+        select cid from course where cname=#{cName} and cweek=#{cWeek} and cnum=#{cNum}
+    </select>
+
+    <insert id="stuAddCourse" parameterType="String">
+        insert into coursechoosing (cid,snum) value (#{cId},#{sNum})
+    </insert>
+
+</mapper>

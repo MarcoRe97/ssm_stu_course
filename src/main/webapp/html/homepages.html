@@ -5,6 +5,7 @@
     <title>首页</title>
     <script src="/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="/js/homepages.js"></script>
+    <script type="text/javascript" src="/js/loginpage.js"></script>
     <link type="text/css" href="/css/homepages.css" rel="stylesheet">
 </head>
 <body>
@@ -12,7 +13,7 @@
         <div class="head-menu">
             <div class="nav-header">
                 <div class="nav-control">
-                    <span>还未登录，请登录！</span>
+                    <span class="stuname-show"></span>
                 </div>
                 <div class="nav-search-box"></div>
                 <div class="nav-personal-box"></div>
@@ -51,7 +52,71 @@
             </div>
             <div class="content-info-right">
                 <div class="content-info-right-all">
+                    <div class="course-table-main">
+                        <h2 style="text-align: center">课程表</h2>
+                        <table class="course-table" style="height: 540px" rules="all">
+                            <thead>
+                                <tr class="head-tr">
+                                    <th scope="col"></th>
+                                    <th scope="col">星期一</th>
+                                    <th scope="col">星期二</th>
+                                    <th scope="col">星期三</th>
+                                    <th scope="col">星期四</th>
+                                    <th scope="col">星期五</th>
+                                </tr>
+                            </thead>
 
+                            <tbody style="text-align: center">
+                                <tr style="height: 80px">
+                                    <th scope="row">1-2节
+                                    </th>
+                                    <td id="table_1_1"></td>
+                                    <td id="table_2_1"></td>
+                                    <td id="table_3_1"></td>
+                                    <td id="table_4_1"></td>
+                                    <td id="table_5_1"></td>
+                                </tr>
+                                <tr style="height: 80px">
+                                    <th scope="row">3-4节
+                                    </th>
+                                    <td id="table_1_2"></td>
+                                    <td id="table_2_2"></td>
+                                    <td id="table_3_2"></td>
+                                    <td id="table_4_2"></td>
+                                    <td id="table_5_2"></td>
+                                </tr>
+                                <tr style="height: 80px">
+                                    <th scope="row">5-6节
+                                    </th>
+                                    <td id="table_1_3"></td>
+                                    <td id="table_2_3"></td>
+                                    <td id="table_3_3"></td>
+                                    <td id="table_4_3"></td>
+                                    <td id="table_5_3"></td>
+                                </tr>
+                                <tr style="height: 80px">
+                                    <th scope="row">7-8节
+                                    </th>
+                                    <td id="table_1_4"></td>
+                                    <td id="table_2_4"></td>
+                                    <td id="table_3_4"></td>
+                                    <td id="table_4_4"></td>
+                                    <td id="table_5_4">
+                                    </td>
+                                </tr>
+                                <tr style="height: 80px">
+                                    <th scope="row">9-10节
+                                    </th>
+                                    <td id="table_1_5"></td>
+                                    <td id="table_2_5"></td>
+                                    <td id="table_3_5"></td>
+                                    <td id="table_4_5"></td>
+                                    <td id="table_5_5">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

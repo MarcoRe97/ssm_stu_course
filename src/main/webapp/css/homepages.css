@@ -105,3 +105,14 @@
     padding: 50px 20px 0;
     width: 789px;
 }
+
+.course-table{
+    border: 2px double gray;
+}
+.course-table .head-tr th{
+    padding-left: 45px;
+    padding-right: 45px;
+}
+/*.course-table tbody td{
+    border: 1px double darkgray;
+}*/

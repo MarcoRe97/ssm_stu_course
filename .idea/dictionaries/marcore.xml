@@ -1,12 +1,18 @@
 <component name="ProjectDictionaryState">
   <dictionary name="marcore">
     <words>
+      <w>addcourse</w>
+      <w>cnum</w>
       <w>courseid</w>
+      <w>cweek</w>
       <w>faile</w>
       <w>failer</w>
+      <w>getcourse</w>
       <w>isdelete</w>
+      <w>keeplogin</w>
       <w>lcall</w>
       <w>lname</w>
+      <w>loginpage</w>
       <w>loginpages</w>
       <w>lpwd</w>
       <w>registerpages</w>

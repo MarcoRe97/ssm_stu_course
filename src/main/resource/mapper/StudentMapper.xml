@@ -3,13 +3,12 @@
 <mapper namespace="com.nit.dao.StudentDao" >
 
     <resultMap id="studentResultMap" type="com.nit.entity.Student">
-        <id property="id" column="id"></id>
+        <id property="sId" column="sid"></id>
         <result property="sNum" column="snum"></result>
         <result property="sPwd" column="spwd"></result>
         <result property="sCall" column="scall"></result>
         <result property="sClass" column="sclass"></result>
         <result property="sName" column="sname"></result>
-        <result property="sId" column="sid"></result>
         <result property="cId" column="cid"></result>
         <result property="isDelete" column="isdelete"></result>
 

@@ -4,24 +4,22 @@ import javax.persistence.Entity;
 
 @Entity
 public class Student {
-    private int id;
+    private int sId;
     private String sNum;
     private String sPwd;
     private String sCall;
     private String stuClass;
     private String stuName;
-    private int sId;
     private int cId;
     private int isDelete;
 
-    public Student(int id, String sNum, String sPwd, String sCall, String stuClass, String stuName, int sId, int cId, int isDelete) {
-        this.id = id;
+    public Student(int sId, String sNum, String sPwd, String sCall, String stuClass, String stuName, int cId, int isDelete) {
+        this.sId = sId;
         this.sNum = sNum;
         this.sPwd = sPwd;
         this.sCall = sCall;
         this.stuClass = stuClass;
         this.stuName = stuName;
-        this.sId = sId;
         this.cId = cId;
         this.isDelete = isDelete;
     }
@@ -29,12 +27,12 @@ public class Student {
     public Student() {
     }
 
-    public int getId() {
-        return id;
+    public int getsId() {
+        return sId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setsId(int sId) {
+        this.sId = sId;
     }
 
     public String getsNum() {
@@ -77,14 +75,6 @@ public class Student {
         this.stuName = stuName;
     }
 
-    public int getsId() {
-        return sId;
-    }
-
-    public void setsId(int sId) {
-        this.sId = sId;
-    }
-
     public int getcId() {
         return cId;
     }
@@ -99,5 +89,19 @@ public class Student {
 
     public void setIsDelete(int isDelete) {
         this.isDelete = isDelete;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "sId=" + sId +
+                ", sNum='" + sNum + '\'' +
+                ", sPwd='" + sPwd + '\'' +
+                ", sCall='" + sCall + '\'' +
+                ", stuClass='" + stuClass + '\'' +
+                ", stuName='" + stuName + '\'' +
+                ", cId=" + cId +
+                ", isDelete=" + isDelete +
+                '}';
     }
 }

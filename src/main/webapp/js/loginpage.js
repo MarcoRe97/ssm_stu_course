@@ -1,6 +1,7 @@
 //登录
 $.loginSubmit=function(){
     var student={};
+    var stuName =$(".username").val();
     student.stuNum =$(".username").val();
     student.stuPwd =$(".password").val();
     $.ajax({url:"/student/login.do",
@@ -10,7 +11,7 @@ $.loginSubmit=function(){
         // contentType: "application/json; charset=utf-8",
         success:function (data) {
             if(data == "success"){
-                alert("登录成功");
+                window.location.replace("/html/homepages.html");
             }
             else if(data == "faile-password"){
                 alert("密码错误")
