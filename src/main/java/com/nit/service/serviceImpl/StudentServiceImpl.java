@@ -17,8 +17,8 @@ public class StudentServiceImpl implements StudentService {
     private StudentDao studentDao;
 
     @Override
-    public int checkLogin(String stuNum, String stuPwd) {
-        Student student = studentDao.findByStuNum(stuNum);
+    public int checkLogin(String sNum, String stuPwd) {
+        Student student = studentDao.findByStuNum(sNum);
         System.out.println(student);
 //        账号密码均正确
         if(student.getsPwd().equals(stuPwd) && student != null){

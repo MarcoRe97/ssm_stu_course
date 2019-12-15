@@ -4,9 +4,9 @@ import com.nit.entity.Student;
 import com.nit.entity.Suser;
 import org.springframework.stereotype.Repository;
 
-//@Repository
+@Repository
 public interface StudentDao {
-    Student findByStuNum(String stuNum);
+    Student findByStuNum(String sNum);
 
     String findStuWithStuNum(String stuNum);
 

@@ -22,7 +22,7 @@ public class CourseServiceImpl implements CourseService {
     }
 
     @Override
-    public String findCourseIdByNameWeek(String cName, String cWeek, String cNum) {
+    public int findCourseIdByNameWeek(String cName, String cWeek, String cNum) {
         return courseDao.findCourseIdByNameWeek(cName,cWeek,cNum);
     }
 

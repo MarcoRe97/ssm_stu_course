@@ -37,12 +37,13 @@ public class CourseController {
     @RequestMapping("/addcourse.do")
     public void stuAddCourse(String cName, String cWeek, String cNum, HttpServletResponse response, HttpSession session) throws IOException {
         String stuNum = session.getAttribute("userName").toString();
-        String strCid = courseService.findCourseIdByNameWeek(cName,cWeek,cNum);
-        if(strCid == null){
+        System.out.println(cName);
+        int strCid = courseService.findCourseIdByNameWeek(cName,cWeek,cNum);
+        if(strCid == 0){
             response.getWriter().write("error");
         }
         else{
-            courseService.stuAddCourse(Integer.parseInt(strCid),stuNum);
+            courseService.stuAddCourse(strCid,stuNum);
             response.getWriter().write("success");
         }
     }

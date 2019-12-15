@@ -20,12 +20,12 @@
         ORDER BY cweek,cnum asc
     </select>
 
-    <select id="findCourseIdByNameWeek" resultMap="String" parameterType="String">
-        select cid from course where cname=#{cName} and cweek=#{cWeek} and cnum=#{cNum}
+    <select id="findCourseIdByNameWeek" resultType="int">
+        select cid from course where cname=#{0} and cweek=#{1} and cnum=#{2}
     </select>
 
-    <insert id="stuAddCourse" parameterType="String">
-        insert into coursechoosing (cid,snum) value (#{cId},#{sNum})
+    <insert id="stuAddCourse">
+        insert into coursechoosing (cid,snum) value (#{0},#{1})
     </insert>
 
 </mapper>

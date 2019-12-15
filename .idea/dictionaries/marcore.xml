@@ -2,6 +2,7 @@
   <dictionary name="marcore">
     <words>
       <w>addcourse</w>
+      <w>addcoursespages</w>
       <w>cnum</w>
       <w>courseid</w>
       <w>cweek</w>
@@ -11,6 +12,7 @@
       <w>isdelete</w>
       <w>keeplogin</w>
       <w>lcall</w>
+      <w>lightgoldenrodyellow</w>
       <w>lname</w>
       <w>loginpage</w>
       <w>loginpages</w>

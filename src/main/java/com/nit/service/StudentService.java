@@ -7,7 +7,7 @@ import javax.annotation.Resource;
 
 @Resource
 public interface StudentService {
-    int checkLogin(String stuNum,String stuPwd);
+    int checkLogin(String sNum,String stuPwd);
 
     boolean checkStuNum(String stuNum);
 

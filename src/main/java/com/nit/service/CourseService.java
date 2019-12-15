@@ -9,7 +9,7 @@ import java.util.List;
 public interface CourseService {
     List<Course> getCourseBySnum(String sNum);
 
-    String findCourseIdByNameWeek(String cName,String cWeek,String cNum);
+    int findCourseIdByNameWeek(String cName,String cWeek,String cNum);
 
     int stuAddCourse(int cId,String sNum);
 }
