@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的班级</title>
+    <script src="/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/classpages.js"></script>
+    <link type="text/css" href="/css/classpages.css" rel="stylesheet">
+</head>
+<body>
+<div class="sy-header-m">
+    <div class="head-menu">
+        <div class="nav-header">
+            <div class="nav-control">
+                <span class="stuname-show"></span>
+            </div>
+            <div class="nav-search-box"></div>
+            <div class="nav-personal-box"></div>
+        </div>
+    </div>
+</div>
+<div class="content-hp">
+    <div class="content-divide">
+        <div class="divide-bg"></div>
+    </div>
+    <div class="content-mid">
+        <div class="nav-content-left">
+            <span class="person-title">个人中心</span>
+            <ul class="person-ul">
+                <li class="person-ul-li">
+                        <span class="person-info-nav">
+                            <!--<span style="letter-spacing: 7px">个人信息</span>-->
+                            <button onclick="" style="letter-spacing: 7px">个人信息</button>
+                        </span>
+                </li>
+                <li class="person-ul-li">
+                        <span class="person-info-nav" style="background-color: #00a1d6;color: white">
+                            <button onclick="$.clickToMyClass()" style="letter-spacing: 7px">我的班级</button>
+                            <!--<span style="letter-spacing: 7px">我的班级</span>-->
+                        </span>
+                </li>
+                <li class="person-ul-li">
+                        <span class="person-info-nav">
+                            <!--<span style="letter-spacing: 7px">我的提问</span>-->
+                            <button onclick="" style="letter-spacing: 7px">我的提问</button>
+                        </span>
+                </li>
+                <li class="person-ul-li">
+                        <span class="person-info-nav">
+                            <!--<span style="letter-spacing: 7px">账号安全</span>-->
+                            <button onclick="" style="letter-spacing: 7px">账号安全</button>
+                        </span>
+                </li>
+            </ul>
+        </div>
+        <div class="content-info-right">
+            <div class="content-info-right-all">
+                <div class="stu-get-into-class">
+                    <span>
+                        <input id="classNum" placeholder="输入班级邀请码">
+                    </span>
+                    <span>
+                        <button onclick="$.stuGetIntoClass()"></button>
+                    </span>
+                </div>
+                <div class="myclass-info">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

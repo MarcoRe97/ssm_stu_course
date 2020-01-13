@@ -55,3 +55,7 @@ $.studentCourses=function (sNum) {
 $.submitToAddCourse=function () {
     window.location.href="/html/addcoursespages.html";
 }
+
+$.clickToMyClass=function () {
+    window.location.replace("/html/classpages.html");
+}

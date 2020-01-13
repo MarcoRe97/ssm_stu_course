@@ -3,20 +3,30 @@
     <words>
       <w>addcourse</w>
       <w>addcoursespages</w>
+      <w>addstuforclass</w>
+      <w>classpages</w>
+      <w>clid</w>
+      <w>clname</w>
+      <w>clnum</w>
       <w>cnum</w>
       <w>courseid</w>
       <w>cweek</w>
       <w>faile</w>
       <w>failer</w>
+      <w>getclass</w>
       <w>getcourse</w>
       <w>isdelete</w>
       <w>keeplogin</w>
       <w>lcall</w>
       <w>lightgoldenrodyellow</w>
       <w>lname</w>
+      <w>lnum</w>
       <w>loginpage</w>
       <w>loginpages</w>
       <w>lpwd</w>
+      <w>myclass</w>
+      <w>qcontent</w>
+      <w>qtitle</w>
       <w>registerpages</w>
       <w>scall</w>
       <w>sclass</w>

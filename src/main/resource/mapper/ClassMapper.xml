@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nit.dao.ClassDao">
+
+    <resultMap id="classResultMap" type="com.nit.entity.Classes">
+        <id property="cLid" column="clid"></id>
+        <result property="cLname" column="clname"></result>
+        <result property="cLnum" column="clnum"></result>
+        <result property="tId" column="tid"></result>
+    </resultMap>
+
+    <select id="getAllClassBySnum" parameterType="String" resultMap="classResultMap">
+        select class.clid,clname,clnum,tid
+        from class
+        right join classandstudent
+        on snum=#{sNum} and classandstudent.clid=class.clid
+    </select>
+
+    <select id="getClassIdByClassNum" parameterType="String" resultType="int">
+        select clid from class where clnum=#{cLnum}
+    </select>
+
+    <insert id="stuGetIntoClass">
+        insert into classandstudent (clid,snum) value (#{0},#{1})
+    </insert>
+
+</mapper>

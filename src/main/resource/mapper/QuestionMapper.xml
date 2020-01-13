@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nit.dao.QuestionDao">
+
+    <resultMap id="questionResultMap" type="com.nit.entity.Question">
+        <id property="qId" column="qid"></id>
+        <result property="qContent" column="qcontent"></result>
+        <result property="qTitle" column="qtitle"></result>
+        <result property="sNum" column="snum"></result>
+        <result property="cId" column="cid"></result>
+    </resultMap>
+
+    <select id="getQuestionBySnum" parameterType="String" resultMap="questionResultMap">
+        select qcontent,qtitle from question where snum=#{sNum}
+    </select>
+
+    <select id="getQuestionByCid" parameterType="int" resultMap="questionResultMap">
+        select qcontent,qtitle from question where cid=#{cId}
+    </select>
+
+
+
+    <insert id="submitQuestion">
+        insert into question (qcontent,qtitle,snum,cid) value (#{0},#{1},#{2},#{3})
+    </insert>
+
+</mapper>
