@@ -1,6 +1,7 @@
 <component name="ProjectDictionaryState">
   <dictionary name="marcore">
     <words>
+      <w>acontent</w>
       <w>addcourse</w>
       <w>addcoursespages</w>
       <w>addstuforclass</w>
@@ -25,6 +26,7 @@
       <w>loginpages</w>
       <w>lpwd</w>
       <w>myclass</w>
+      <w>myclassinfo</w>
       <w>qcontent</w>
       <w>qtitle</w>
       <w>registerpages</w>
@@ -39,6 +41,7 @@
       <w>stuname</w>
       <w>stunum</w>
       <w>stupwd</w>
+      <w>submitquestion</w>
       <w>suser</w>
     </words>
   </dictionary>

@@ -1,5 +1,5 @@
-package com.nit.dao;
+package com.nit.service;
 
-public interface QuestionDao {
+public interface QuestionService {
     int submitQuestion(String qContent,String qTitle,String sNum,int cLid);
 }

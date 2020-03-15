@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.nit.dao.AnswerDao">
+    <resultMap id="answerResultMap" type="com.nit.entity.Answer">
+        <id property="aId" column="aid"></id>
+        <result property="aContent" column="acontent"></result>
+        <result property="qId" column="qid"></result>
+    </resultMap>
+
+    <insert id="answerTheQuestion">
+        insert into answers (acontent,qid) value (#{1},#{2})
+    </insert>
 
 </mapper>

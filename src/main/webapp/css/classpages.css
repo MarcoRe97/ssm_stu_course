@@ -114,3 +114,11 @@
     padding: 50px 20px 0;
     width: 789px;
 }
+.myclass-info button{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+    height: 35px;
+    width: 100px;
+    border-radius: 1px;
+}
